@@ -5,26 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>VUE SLIDER</title>
 </head>
 <body>
     <div id="app" class="container">
         <div class="slider-wrapper">
           <!-- pulsante indietro -->
-            <div class="prev">
+            <div class="prev" @click="prevPhoto">
                 <i class="fas fa-angle-left"></i>
             </div>
             <div class="images">
-              <img :src="immagini[0]" alt="">
+              <img :src="immagini[contatore]" alt="">
 
             </div>
             <!-- pulsante avanti -->
-            <div class="next">
+            <div class="next" @click="nextPhoto">
                 <i class="fas fa-angle-right"></i>
             </div>
             <div class="nav">
-                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle" v for="(immagine, i) in immagini"
+                :class="(i == contatore) ? 'active'"></i>
+                <!-- abbiamo aggiunto la i perchè dobbiamo vedere che  -->
+                <!-- corrisponda al contatore -->
+                <!-- se l'indice è uguale al contatore allora mettigli la classe active -->
 
             </div>
         </div>
