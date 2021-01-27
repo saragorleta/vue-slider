@@ -15,16 +15,16 @@ var slider= new Vue({
       if(this.contatore == (immagini.length - 1)){
                     // immagini.length - 1 cosi che parta da 0 e arrivi a 4
       this.contatore=0;//quando arriva a 5 cambia con 0
-    } else
+    } else{
       this.contatore++; //altrimenti continua ad andare avanti il contatore
-  },
-    prevPhoto() {
+    }
+    prevPhoto(){
       if(this.contatore < 1) {
         this.counter = this.immagini.length - 1; //il contatore deve essere a 5
-      }else (
-          this.contatore--; //altrimenti continua ad andare indietro il contatore
-    )
-
+      }else {
+        this.contatore--; //altrimenti continua ad andare indietro il contatore
+      }
+  },
 });
 // !!quando devo andare a prendere delle variabili in data devo andare
 // ad utilizzare il this!!
