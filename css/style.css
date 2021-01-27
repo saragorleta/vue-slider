@@ -21,8 +21,9 @@
     text-align: center;
 }
 .slider-wrapper .images img {
-    display: none;
+    /* display: none; */
     height: 100%;
+    width: 70%;
 }
 .slider-wrapper .images img.active {
     display: inline-block;
@@ -54,5 +55,5 @@
     margin: 0 20px;
 }
 .nav > i.active {
-    color: blue;
+    color: grey;
 }

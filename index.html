@@ -24,13 +24,14 @@
                 <i class="fas fa-angle-right"></i>
             </div>
             <div class="nav">
-                <i class="fas fa-circle" v for="(immagine, i) in immagini"
-                :class="(i == contatore) ? 'active'"></i>
+                <i class="fas fa-circle" v-for="(immagine, i) in immagini"
+                :class="(i == contatore) ? 'active' : ''" @click="cambiaFoto(i)">
+                </i>
                 <!-- abbiamo aggiunto la i perchè dobbiamo vedere che  -->
                 <!-- corrisponda al contatore -->
-                <!-- se l'indice è uguale al contatore allora mettigli la classe active -->
+                <!-- se l'indice è uguale al contatore allora mettiamo la classe active -->
 
-            </div>
+             </div>
         </div>
     </div>
 
